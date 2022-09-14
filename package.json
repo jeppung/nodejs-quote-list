@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-quote-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeppung/nodejs-quote-list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeppung/nodejs-quote-list/issues"
+  },
+  "homepage": "https://github.com/jeppung/nodejs-quote-list#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "yargs": "^16.2.0"
+  }
+}

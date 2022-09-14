@@ -1,10 +1,24 @@
+const yargs = require("yargs");
 const {pertanyaan,saveData} = require('./system');
 
-const main = async () => {
-    const name = await pertanyaan('Input Name');
-    const quote = await pertanyaan('Input Quote');
+yargs.command({
+    command: 'add',
+    describe: 'Add new quote',
+    builder: {
+        name: {
+            describe: "Quote author",
+            demandOption: true,
+            type: 'string'
+        },
+        quote: {
+            describe: "Quote",
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler(argv) {
+        saveData(argv.name, argv.quote);
+    }
+});
 
-    saveData(name, quote);
-};
-
-main();
+yargs.parse();
